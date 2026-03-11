@@ -19,15 +19,18 @@ def merge_arrays(left, right):
             result.append(right[j])
             j += 1
 
-    if i < left_len:
-        while i < left_len:
-            result.append(left[i])
-            i += 1
+    # if i < left_len:
+    #     while i < left_len:
+    #         result.append(left[i])
+    #         i += 1
 
-    if j < right_len:
-        while j < right_len:
-            result.append(right[j])
-            j += 1
+    # if j < right_len:
+    #     while j < right_len:
+    #         result.append(right[j])
+    #         j += 1
+
+    result.extend(left[i:])
+    result.extend(right[j:])
 
     return result
 
