@@ -16,5 +16,22 @@ def numberOfUniqueElementsBruteForce(nums):
     return i
 
 
+def numberOfUniqueElements(nums):
+
+    i = 0
+    j = i+1
+
+    while j < len(nums):
+        if nums[i] == nums[j]:
+            j += 1
+        else:
+            nums[i], nums[j] = nums[j], nums[i]
+            i += 1
+
+    return i
+
+
 print("Number of unique elements in array are:",
       numberOfUniqueElementsBruteForce(nums))
+print("Number of unique elements in array are:",
+      numberOfUniqueElements(nums))
